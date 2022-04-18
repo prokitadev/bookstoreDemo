@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm.min.css">
+</head>
+<body>
+    <h1>Github User</h1>
+    <p>
+        <ul>
+            <li th:text="|Identyfikator: ${user.id}|"></li>
+            <li th:text="|Login: ${user.login}|"></li>
+            <li th:if="${user.name != null}" th:text="|Nazwa: ${user.name}|"></li>
+            <li th:text="|Typ: ${user.type}|"></li>
+            <li th:text="|Url do avatara: ${user.avatarUrl}|"></li>
+            <li th:text="|Data stworzenia: ${user.createdAt}|"></li>
+            <li th:if="${user.calculations != null}" th:text="|Obliczenia: ${user.calculations}|"></li>
+        </ul>
+    </p>
+</body>
+</html>
